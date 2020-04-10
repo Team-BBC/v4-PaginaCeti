@@ -4,7 +4,7 @@
 
       if (count($results) > 0) {
         echo '<table class="table table-dark">
-            <thead>
+            <thead class="text-center">
               <tr class = "font-weight-bold">
                 <td>Nombre</td>
                 <td>Archivo</td>
@@ -20,20 +20,23 @@
                   <td>'.$value['url'].'</td>
                   <td>'.$value['fecha'].'</td>
 
-                  <td>
-                    <span class="btn btn-warning btn-sm" onclick="obtenerDatos('.$value['id'].')" data-toggle"modal data-target="#actualizarModal">
-                      <i class="fas fa-edit"></i>
+                  <td class="text-center">
+                    <span class="btn btn-warning btn-sm " onclick="obtenerDatos('.$value['id'].')" data-toggle"modal data-target="#actualizarModal">
+                      <img src="editar.png">
                     </span>
                   </td>
 
-                  <td>   
-                  <span class="btn btn-danger btn-sm" onclick="eliminarDatos('.$value['id'].')">
-                      <i class="fas fa-edit"></i>
+                  <td class="text-center">   
+                  <span class="btn btn-danger btn-sm " onclick="eliminarDatos('.$value['id'].')">
+                    <img src="borrar.png">
+
                     </span>
                   </td>
-                  <td>
-                    <span class="btn btn-info btn-lg">
-                      <i class="fas fa-edit"></i>
+                  <td class="text-center">
+                    <span class="btn btn-info btn-sm ">                      
+                      <a href = '.$value['url'].' target="_blank">
+                      <img src="descargar.png">
+                      </a>
                     </span>
                     
                   </td>

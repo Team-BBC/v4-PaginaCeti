@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light " style="background-color: #B2CDE0;">            
+<nav class="navbar navbar-expand-sm navbar-light " style="clear:both;background-color: #B2CDE0;bottom: 0;position: fixed;width:100%;">            
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <p class="nav-link navbar-brand mb-n1" >Tecnologias Quimicas <span class="sr-only">(current)</span></p>

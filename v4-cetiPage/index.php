@@ -31,10 +31,10 @@
         
             <div class = "text-center text-light mt-5" style="width: 100%;"> 
                 <h2>
-                    <label >Division de Tecnologias Quimicas</label>
+                    <label class="text-dark">Division de Tecnologias Quimicas</label>
                 </h2>
                 <h3 > 
-                    <label>hojas de Seguridad</label>
+                    <label class="text-dark">hojas de Seguridad</label>
                 </h3>
             </div>
             <!--Busqueda-->

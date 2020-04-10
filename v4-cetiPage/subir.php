@@ -35,7 +35,7 @@
 			echo ("Hay un error en el archivo <br>");
 		}
 		if (move_uploaded_file($archivoRecibido, $destino)) {
-			echo "Fichero grabado";
+			header("location:admin.php");
 		}else{
 			echo "error";
 		}

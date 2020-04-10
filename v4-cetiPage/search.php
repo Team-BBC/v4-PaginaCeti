@@ -9,7 +9,7 @@
                 <td>Nombre</td>
                 <td>Archivo</td>
                 <td>Utima modificacion</td>
-                <td>Descargar</td>
+                <td class="text-center">Descargar</td>
               </tr>
             </thead>';
         foreach ($results as $value) {
@@ -17,10 +17,10 @@
                   <td>'.$value['sustancia'].'</td>
                   <td>'.$value['url'].'</td>
                   <td>'.$value['fecha'].'</td>
-                  <td>
-                    <span class="btn btn-info btn-lg" data-toggle="modal" data-target="#actualizarModal">
-                      <i class="fas fa-edit"></i>
-                    </span>
+                  <td class="text-center">
+                    <span class="btn btn-info btn-sm ">
+                       <img src="descargar.png">
+                     </span>
                     
                   </td>
                 </tr>';        

@@ -22,6 +22,20 @@ function eliminarDatos(){
 	})
 	.then((willDelete) => {
 		if (willDelete) {
+			$.ajax({
+				type:"POST",
+				url:"procesos/insertarDatos.php",
+				data:$('#frminsert').serialize(),
+				success:function(r){
+					if (r==1) {
+						$('#frminsert')[0].reset();
+						mostrar();
+						swal("Archivo subido con exito","success");
+					}else{
+						swal("Error al subir el fichero","error")
+					}
+				}
+			});
 			
 		} 
 	});
