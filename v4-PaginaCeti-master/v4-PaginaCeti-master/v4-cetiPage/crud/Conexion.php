@@ -4,7 +4,7 @@
 
 	class Conexion{
 		public function conectar(){
-			$conexion = new PDO("mysql:host=localhost;dbname=cetipage","root","");
+			$conexion = new PDO("mysql:host=localhost;dbname=hojastq","root","");
 			return $conexion;
 		}
 	}
