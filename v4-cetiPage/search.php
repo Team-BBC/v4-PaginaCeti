@@ -1,5 +1,6 @@
 <?php  $datosTabla = "";
 
+
     if (isset($_POST['search'])) {
 
       if (count($results) > 0) {
@@ -7,20 +8,16 @@
             <thead>
               <tr class = "font-weight-bold">
                 <td>Nombre</td>
-                <td>Archivo</td>
-                <td>Utima modificacion</td>
-                <td class="text-center">Descargar</td>
+                <td>Descargar</td>
               </tr>
             </thead>';
         foreach ($results as $value) {
           $datosTabla = $datosTabla.'<tr>
                   <td>'.$value['sustancia'].'</td>
-                  <td>'.$value['url'].'</td>
-                  <td>'.$value['fecha'].'</td>
-                  <td class="text-center">
-                    <span class="btn btn-info btn-sm ">
-                       <img src="descargar.png">
-                     </span>
+                  <td>
+                    <span class="btn btn-info btn-lg" data-toggle="modal" data-target="#actualizarModal">
+                      <i class="fas fa-edit"></i>
+                    </span>
                     
                   </td>
                 </tr>';        
@@ -29,7 +26,7 @@
         }
         echo "</table>";
       } else {
-        echo "No results found";
+        echo "Sin Resultados";
       }
     }
 ?>

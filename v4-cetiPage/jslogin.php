@@ -2,11 +2,6 @@
 session_start();
 require_once('loginRequest.php');
 
-
-//require_once "Conexion.php";
-
-
-
 $username = $_POST['username'];
 $password = $_POST['password'];
 

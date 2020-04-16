@@ -19,18 +19,17 @@
                   <td>'.$value['sustancia'].'</td>
                   <td>'.$value['url'].'</td>
                   <td>'.$value['fecha'].'</td>
-
-                  <td class="text-center">
-                    <span class="btn btn-warning btn-sm " onclick="obtenerDatos('.$value['id'].')" data-toggle"modal data-target="#actualizarModal">
+                  <td>
+                    <span class="btn btn-warning btn-lg" onclick="obtenerDatos('.$value['id'].')" data-toggle="modal" data-target="#actualizarModal">
                       <img src="editar.png">
                     </span>
                   </td>
-
-                  <td class="text-center">   
-                  <span class="btn btn-danger btn-sm " onclick="eliminarDatos('.$value['id'].')">
-                    <img src="borrar.png">
-
-                    </span>
+                  <td class="text-center"> 
+                    <form  onsubmit=\"return confirm("Eliminar");\" method="post" action="eliminar.php">
+                      <input type="submit" name="id" value='.$value['id'].'>
+                          <button name="eliminar"> <img src="borrar.png">  </button>
+                    </form>                    
+                               
                   </td>
                   <td class="text-center">
                     <span class="btn btn-info btn-sm ">                      

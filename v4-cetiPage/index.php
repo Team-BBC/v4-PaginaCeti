@@ -31,10 +31,10 @@
         
             <div class = "text-center text-light mt-5" style="width: 100%;"> 
                 <h2>
-                    <label class="text-dark">Division de Tecnologias Quimicas</label>
+                    <label >Division de Tecnologias Quimicas</label>
                 </h2>
                 <h3 > 
-                    <label class="text-dark">hojas de Seguridad</label>
+                    <label>hojas de Seguridad</label>
                 </h3>
             </div>
             <!--Busqueda-->
@@ -57,7 +57,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-12 m-auto">
                                         <?php require_once "search.php";
                                             
                                         ?>
