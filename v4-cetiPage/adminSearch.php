@@ -26,13 +26,15 @@
                   </td>
                   <td class="text-center"> 
                     <form  onsubmit=\"return confirm("Eliminar");\" method="post" action="eliminar.php">
-                      <input type="submit" name="id" value='.$value['id'].'>
-                          <button name="eliminar"> <img src="borrar.png">  </button>
+                    
+                      <input type="hidden" name="sustancia" id="sustancia" value='.$value['sustancia'].'>
+                      
+                      <button class="btn btn-danger btn-lg" name= "eliminar"><img src="borrar.png"> </button>
                     </form>                    
                                
                   </td>
                   <td class="text-center">
-                    <span class="btn btn-info btn-sm ">                      
+                    <span class="btn btn-info btn-lg ">                      
                       <a href = '.$value['url'].' target="_blank">
                       <img src="descargar.png">
                       </a>
