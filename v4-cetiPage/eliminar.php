@@ -1,7 +1,10 @@
 <?php     
     require_once('loginRequest.php');
-    $sustancia = $_POST["sustancia"];
 
+    //valor que recibe del form de adminsearch.php
+    $sustancia = $_POST["sustancia"];
+    //se convierte a la ruta del documento
+    $del = "ficherosSubidos/$sustancia.pdf";
    
     $sql = $db -> prepare("DELETE FROM document WHERE sustancia = :sustancia");
     $sql -> bindValue(':sustancia',$sustancia);
@@ -11,11 +14,19 @@
 
     if($sql -> rowCount()>0){
         $count = $sql -> rowCount();
-        echo "<div class='content alert alert-primary' > 
-
-        Gracias: $count registro ha sido eliminado  </div>";
+        //Esta parte elimina, e imprime si hubo errores en el proceso
+        if (isset($del)){
+            $proceso = unlink($del);
+            if(!$proceso){
+                echo "Error al eliminar el archivo";
+            }else{
+                echo "El registro se elimino exitosamente";
+                header("location:admin.php");
+            }    
+        }
+      
     }else{
-        echo "<div class='content alert alert-danger'> No se pudo eliminar el registro  </div>";
+        
 
         print_r($sql->errorInfo()); 
     }

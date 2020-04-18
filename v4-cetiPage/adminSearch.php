@@ -25,13 +25,13 @@
                     </span>
                   </td>
                   <td class="text-center"> 
-                    <form  onsubmit=\"return confirm("Eliminar");\" method="post" action="eliminar.php">
+                    <form  onsubmit=return confirm("Eliminar"); method="post" action="eliminar.php" name="formi">
                     
                       <input type="hidden" name="sustancia" id="sustancia" value='.$value['sustancia'].'>
                       
                       <button class="btn btn-danger btn-lg" name= "eliminar"><img src="borrar.png"> </button>
                     </form>                    
-                               
+                             
                   </td>
                   <td class="text-center">
                     <span class="btn btn-info btn-lg ">                      
